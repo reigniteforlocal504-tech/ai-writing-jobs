@@ -1,7 +1,7 @@
 // app/api/jobs/himalayas/route.ts
 
 import { NextRequest, NextResponse } from 'next/server';
-import { fetchHimalayas Jobs } from '@/lib/fetchHimalayas';
+import { fetchHimalayasJobs } from '@/lib/fetchHimalayas';
 import { Track } from '@/lib/types';
 
 export async function GET(request: NextRequest) {
