@@ -20,8 +20,8 @@ export async function fetchHimalayasJobs(track: Track, offset: number = 0): Prom
 
     const data = await response.json();
 
-    return data.map((job: any) => {
-      const postedDate = new Date(job.pubDate);
+    return (data.jobs || []).map((job: any) => {
+      const postedDate = new Date(job.pubDate * 1000);
       const now = new Date();
       const hoursDiff = (now.getTime() - postedDate.getTime()) / (1000 * 60 * 60);
       
